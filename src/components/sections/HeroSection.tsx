@@ -13,7 +13,7 @@ const HeroSection = () => {
           className="w-full h-full object-cover"
         />
         {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-background/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/25 to-transparent" />
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto text-center">
