@@ -61,7 +61,6 @@ const ProjectsSection = () => {
           {projects.map((project, i) => (
             <ScrollReveal key={i} delay={0.1 * i}>
               <div className="group relative p-8 rounded-2xl bg-card border border-border hover:border-glow transition-all duration-500 box-glow">
-                {/* Accent gradient */}
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                 
                 <div className="relative z-10">
@@ -76,12 +75,7 @@ const ProjectsSection = () => {
                       </div>
                     </div>
                     {project.link && (
-                      <a
-                        href={project.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-muted-foreground hover:text-primary transition-colors"
-                      >
+                      <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                         <ExternalLink size={20} />
                       </a>
                     )}
@@ -100,10 +94,7 @@ const ProjectsSection = () => {
 
                   <div className="flex flex-wrap gap-2">
                     {project.tech.map((t) => (
-                      <span
-                        key={t}
-                        className="text-xs font-mono px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20"
-                      >
+                      <span key={t} className="text-xs font-mono px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20">
                         {t}
                       </span>
                     ))}
