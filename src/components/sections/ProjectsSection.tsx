@@ -59,8 +59,7 @@ const ProjectsSection = () => {
 
         <div className="space-y-8">
           {projects.map((project, i) => (
-            <ScrollReveal key={i} delay={0.1 * i}>
-              <div className="group relative p-8 rounded-2xl bg-card border border-border hover:border-glow transition-all duration-500 box-glow">
+            <div key={i} className="group relative p-8 rounded-2xl bg-card border border-border hover:border-glow transition-all duration-500 box-glow">
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                 
                 <div className="relative z-10">
@@ -100,8 +99,7 @@ const ProjectsSection = () => {
                     ))}
                   </div>
                 </div>
-              </div>
-            </ScrollReveal>
+            </div>
           ))}
         </div>
       </div>
