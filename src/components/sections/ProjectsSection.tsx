@@ -17,7 +17,7 @@ const projects = [
     link: "",
   },
   {
-    title: "Basirah (بصيرة)",
+    title: "Basirah",
     subtitle: "2nd Place 🥈 — MSA Hacks",
     description:
       "An interactive global crisis platform designed to turn awareness into action. Features a live 3D globe of active humanitarian crises with real time updates, severity classification, and verified charity links so users can donate directly and see their impact visualized through a live animation from donor to destination.",
