@@ -15,32 +15,33 @@ const experiences = [
   },
   {
     role: "Program Design & Delivery Lead",
-    company: "OnTalent Lab – Western Chapter",
+    company: "OnTalent Lab, Western Chapter",
     location: "London, ON",
     period: "Nov 2025 – Present",
     bullets: [
-      "Led design and coordination of STEMM educational programming for K–12 students across Ontario.",
-      "Led a website revamp to enhance usability and accessibility.",
+      "Lead the design and delivery of STEMM workshops for K to 12 students across Ontario.",
+      "Mentor student teams through the FIRST Robotics Competition, helping them work through problems under competition deadlines.",
+      "Led a full website revamp to make our programs easier to find and more accessible.",
     ],
   },
   {
-    role: "Director — Re-Engineer & Innovation",
+    role: "VP of Technology",
     company: "Western Engineering Competition",
     location: "London, ON",
     period: "Sep 2025 – Present",
     bullets: [
-      "Oversaw event planning and logistics for a seamless competition experience.",
-      "Collaborated cross-functionally to design engineering challenges.",
+      "Run the technical side of the competition, including the website, participant registration and the online file submission platform.",
+      "Manage the Discord server and handle on site troubleshooting during live events so things keep running smoothly.",
     ],
   },
   {
-    role: "Software Subsystem Member",
+    role: "Software Team Member",
     company: "WE Mars Club",
     location: "London, ON",
-    period: "Sep 2025 – Present",
+    period: "Jan 2026 – Present",
     bullets: [
-      "Developing robotics software in Linux/ROS2 using C++ and Python.",
-      "Contributing to autonomous systems and collaborative testing.",
+      "Developing autonomous navigation and control systems in C++ and Python on Linux with ROS2.",
+      "Implementing and testing ROS2 nodes for sensor integration and communication between subsystems.",
     ],
   },
 ];
