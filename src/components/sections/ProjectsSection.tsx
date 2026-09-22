@@ -1,5 +1,5 @@
 import ScrollReveal from "@/components/common/ScrollReveal";
-import { Shield, Globe, Gamepad2, ExternalLink } from "lucide-react";
+import { Shield, Globe, Gamepad2, BarChart3, Wrench, ExternalLink } from "lucide-react";
 
 const projects = [
   {
@@ -18,17 +18,17 @@ const projects = [
   },
   {
     title: "Basirah",
-    subtitle: "2nd Place 🥈 — MSA Hacks",
+    subtitle: "2nd Place at MSA Hacks 🥈",
     description:
       "An interactive global crisis platform designed to turn awareness into action. Features a live 3D globe of active humanitarian crises with real time updates, severity classification, and verified charity links so users can donate directly and see their impact visualized through a live animation from donor to destination.",
-    tech: ["React", "TypeScript", "Vite", "Mapbox GL JS"],
+    tech: ["React", "TypeScript", "Node.js", "Mapbox GL JS"],
     highlights: [
       "Interactive 3D globe with crises mapped to exact locations",
       "Live donation impact visualization with smooth animations",
       "Crisis severity classification with funding gaps and aid status",
     ],
     icon: Globe,
-    link: "https://basirah-ten.vercel.app",
+    link: "https://basirah-wine.vercel.app/",
   },
   {
     title: "No One Needs To Lie",
@@ -42,6 +42,34 @@ const projects = [
       "Collaborated using Git for version control, feature integration, and iterative delivery across distributed subsystems",
     ],
     icon: Gamepad2,
+    link: "",
+  },
+  {
+    title: "Data Dashboards",
+    subtitle: "Power BI and Tableau",
+    description:
+      "Two dashboards built on large public datasets. One looks at 2M+ U.S. commercial flights to show on time, delayed and canceled rates by airline and airport. The other breaks down 23M+ rows of Seattle Airbnb data to find what actually drives price across the city.",
+    tech: ["Power BI", "DAX", "Tableau", "Excel", "Python"],
+    highlights: [
+      "Built a star schema model in Power BI with DAX measures for on time, delayed and canceled percentages",
+      "Mapped Airbnb pricing across 27 Seattle zip codes with weekly revenue trends and price per bedroom",
+      "Explored 100+ fields to pick out the main revenue drivers and pricing patterns",
+    ],
+    icon: BarChart3,
+    link: "",
+  },
+  {
+    title: "Peat Cup Permutator",
+    subtitle: "2nd Place in ES1050, picked by the client",
+    description:
+      "A semi automatic hole punching machine our team of five built for Western Agrotunnel. It cut their manual prep time by 80% and the client chose it to actually put into use.",
+    tech: ["Arduino", "AutoCAD", "Autodesk Inventor"],
+    highlights: [
+      "Led the CAD modeling and programmed the Arduino actuators",
+      "Designed a modular base with jigsaw style pieces so it can be expanded later",
+      "Put together the full documentation package so the client can extend it without us",
+    ],
+    icon: Wrench,
     link: "",
   },
 ];
