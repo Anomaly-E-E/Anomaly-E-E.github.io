@@ -27,11 +27,9 @@ src/
 ├── components/
 │   ├── common/       # Reusable components (ScrollReveal)
 │   ├── layout/       # Layout components (Navbar, StarField)
-│   ├── sections/     # Page sections (Hero, About, etc.)
-│   └── ui/           # UI primitives (shadcn/ui)
-├── hooks/            # Custom React hooks
-├── lib/              # Utility functions
+│   └── sections/     # Page sections (Hero, About, etc.)
 ├── pages/            # Page components
+├── test/             # Vitest setup
 ├── index.css         # Global styles & design tokens
 └── main.tsx          # App entry point
 ```
