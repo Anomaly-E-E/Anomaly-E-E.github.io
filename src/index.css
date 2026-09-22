@@ -6,23 +6,23 @@
 
 @layer base {
   :root {
-    --background: 30 10% 5%;
+    --background: 30 10% 15%;
     --foreground: 40 15% 88%;
 
-    --card: 30 8% 9%;
+    --card: 30 10% 19%;
     --card-foreground: 40 15% 88%;
 
-    --popover: 30 8% 9%;
+    --popover: 30 10% 19%;
     --popover-foreground: 40 15% 88%;
 
     --primary: 38 75% 55%;
     --primary-foreground: 30 10% 5%;
 
-    --secondary: 30 8% 13%;
+    --secondary: 30 9% 23%;
     --secondary-foreground: 40 12% 75%;
 
-    --muted: 30 6% 11%;
-    --muted-foreground: 35 8% 48%;
+    --muted: 30 8% 17%;
+    --muted-foreground: 35 10% 64%;
 
     --accent: 20 50% 50%;
     --accent-foreground: 40 15% 95%;
@@ -30,8 +30,8 @@
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 30 8% 15%;
-    --input: 30 8% 15%;
+    --border: 32 10% 24%;
+    --input: 32 10% 24%;
     --ring: 38 75% 55%;
 
     --radius: 0.75rem;
@@ -112,7 +112,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: hsl(30 10% 5%);
+  background: hsl(30 10% 15%);
 }
 
 ::-webkit-scrollbar-thumb {
