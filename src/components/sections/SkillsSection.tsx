@@ -1,23 +1,31 @@
 import ScrollReveal from "@/components/common/ScrollReveal";
 import { motion } from "framer-motion";
+import { Award } from "lucide-react";
 
 const skillGroups = [
   {
     label: "Languages",
-    skills: ["Java", "JavaScript", "Python", "C++", "SQL", "HTML/CSS"],
+    skills: ["Java", "JavaScript", "Python", "C++", "C#", "SQL", "HTML/CSS"],
   },
   {
     label: "Frameworks & Libraries",
     skills: ["React", "Node.js", "Express", "Spring Boot", "ROS2"],
   },
   {
-    label: "Infrastructure & Tools",
-    skills: ["Docker", "Git", "Linux", "AWS", "MySQL", "PostgreSQL"],
+    label: "Tools & Data",
+    skills: ["Docker", "Git", "Linux", "AWS", "PostgreSQL", "MySQL", "MongoDB", "Redis", "Power BI", "Tableau"],
   },
   {
-    label: "Security & Networking",
-    skills: ["SCADA", "PLC", "DMZ", "Purdue Model", "OWASP Top 10", "JWT/OAuth", "Security Concepts"],
+    label: "Security",
+    skills: ["OWASP Top 10", "JWT/OAuth", "bcrypt", "Wireshark", "Static Code Analysis", "Rate Limiting"],
   },
+];
+
+const certifications = [
+  { name: "OT Cybersecurity Foundation", status: "Completed" },
+  { name: "ISA/IEC 62443 Masterclass", status: "Completed" },
+  { name: "CompTIA Security+", status: "In Progress" },
+  { name: "AWS Cloud Practitioner", status: "In Progress" },
 ];
 
 const SkillsSection = () => {
@@ -56,25 +64,38 @@ const SkillsSection = () => {
         </div>
 
         {/* Certifications */}
-        <ScrollReveal delay={0.3}>
-          <div className="mt-8 p-6 rounded-xl bg-card border border-border">
-            <h4 className="font-mono text-sm text-accent mb-3 tracking-wider">{"// Certifications"}</h4>
-            <ul className="space-y-2">
-              <li className="text-sm text-muted-foreground flex gap-2">
-                <span className="text-accent/50 shrink-0">▹</span>
-                OT Cybersecurity Foundation
-              </li>
-              <li className="text-sm text-muted-foreground flex gap-2">
-                <span className="text-accent/50 shrink-0">▹</span>
-                OT Cybersecurity Masterclass: Become a 62443 PRO
-              </li>
-              <li className="text-sm text-muted-foreground flex gap-2">
-                <span className="text-accent/50 shrink-0">▹</span>
-                CompTIA Security+ (In Progress)
-              </li>
-            </ul>
-          </div>
+        <ScrollReveal delay={0.2}>
+          <h3 className="text-2xl md:text-3xl font-bold mt-20 mb-8">
+            <span className="text-primary">Certifications</span>
+          </h3>
         </ScrollReveal>
+
+        <div className="grid sm:grid-cols-2 gap-4">
+          {certifications.map((cert, i) => {
+            const done = cert.status === "Completed";
+            return (
+              <ScrollReveal key={cert.name} delay={i * 0.1}>
+                <div className="flex items-center gap-4 p-5 rounded-xl bg-card border border-primary/30 hover:border-primary/60 transition-all duration-300 box-glow">
+                  <div className="w-12 h-12 shrink-0 rounded-lg bg-primary/15 flex items-center justify-center">
+                    <Award className="text-primary" size={24} />
+                  </div>
+                  <div>
+                    <p className="text-base md:text-lg font-semibold text-foreground">{cert.name}</p>
+                    <span
+                      className={`inline-block mt-1 text-xs font-mono px-2.5 py-0.5 rounded-full border ${
+                        done
+                          ? "bg-primary/15 text-primary border-primary/40"
+                          : "bg-secondary text-foreground/70 border-border"
+                      }`}
+                    >
+                      {cert.status}
+                    </span>
+                  </div>
+                </div>
+              </ScrollReveal>
+            );
+          })}
+        </div>
       </div>
     </section>
   );
