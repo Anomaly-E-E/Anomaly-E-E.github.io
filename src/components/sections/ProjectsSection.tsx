@@ -102,8 +102,14 @@ const ProjectsSection = () => {
                       </div>
                     </div>
                     {project.link && (
-                      <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                        <ExternalLink size={20} />
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="shrink-0 inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-all text-sm"
+                      >
+                        Live demo
+                        <ExternalLink size={14} />
                       </a>
                     )}
                   </div>
