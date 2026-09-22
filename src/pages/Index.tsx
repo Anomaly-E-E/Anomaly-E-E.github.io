@@ -1,3 +1,4 @@
+import StarField from "@/components/layout/StarField";
 import Navbar from "@/components/layout/Navbar";
 import HeroSection from "@/components/sections/HeroSection";
 import AboutSection from "@/components/sections/AboutSection";
@@ -9,6 +10,7 @@ import ContactSection from "@/components/sections/ContactSection";
 const Index = () => {
   return (
     <div className="relative min-h-screen bg-background grid-bg">
+      <StarField />
       <Navbar />
       <main className="relative z-10">
         <HeroSection />
