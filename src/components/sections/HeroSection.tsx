@@ -66,7 +66,7 @@ const HeroSection = () => {
           </span>
           <span className="inline-flex items-center gap-2 text-xs px-4 py-2 rounded-full border border-foreground/15 bg-foreground/5 backdrop-blur-sm text-foreground/80">
             <Shield size={13} className="text-primary" />
-            ICS / OT Cybersecurity
+            Cybersecurity
           </span>
         </motion.div>
 
