@@ -24,36 +24,22 @@ const experiences = [
       "Automated contract deadline monitoring with Spring Scheduler daily expiry checks, cutting missed renewals by 30%, and wrote unit tests to ensure reliable delivery.",
     ],
   },
+];
+
+const leadership = [
   {
     role: "Program Design & Delivery Lead",
-    company: "OnTalent Lab, Western Chapter",
-    location: "London, ON",
+    org: "OnTalent Lab, Western Chapter",
     period: "Nov 2025 – Present",
-    bullets: [
-      "Lead the design and delivery of STEMM workshops for K to 12 students across Ontario.",
-      "Mentor student teams through the FIRST Robotics Competition, helping them work through problems under competition deadlines.",
-      "Led a full website revamp to make our programs easier to find and more accessible.",
-    ],
+    summary:
+      "Lead STEMM workshops for K to 12 students across Ontario, mentor FIRST Robotics teams, and led a full website revamp.",
   },
   {
     role: "VP of Technology",
-    company: "Western Engineering Competition",
-    location: "London, ON",
+    org: "Western Engineering Competition",
     period: "Sep 2025 – Present",
-    bullets: [
-      "Run the technical side of the competition, including the website, participant registration and the online file submission platform.",
-      "Manage the Discord server and handle on site troubleshooting during live events so things keep running smoothly.",
-    ],
-  },
-  {
-    role: "Software Team Member",
-    company: "WE Mars Club",
-    location: "London, ON",
-    period: "Jan 2026 – Present",
-    bullets: [
-      "Developing autonomous navigation and control systems in C++ and Python on Linux with ROS2.",
-      "Implementing and testing ROS2 nodes for sensor integration and communication between subsystems.",
-    ],
+    summary:
+      "Run the competition's website, registration and file submission platform, and handle on site troubleshooting during live events.",
   },
 ];
 
@@ -104,6 +90,25 @@ const ExperienceSection = () => {
               </ScrollReveal>
             ))}
           </div>
+        </div>
+
+        <ScrollReveal>
+          <h4 className="text-xl md:text-2xl font-bold mt-20 mb-6">
+            Leadership & <span className="text-primary">Teams</span>
+          </h4>
+        </ScrollReveal>
+
+        <div className="grid sm:grid-cols-2 gap-4">
+          {leadership.map((item, i) => (
+            <ScrollReveal key={item.org} delay={i * 0.1}>
+              <div className="h-full p-5 rounded-xl bg-card border border-border hover:border-glow transition-all duration-300">
+                <p className="font-semibold text-foreground">{item.role}</p>
+                <p className="text-sm text-primary/80 font-mono">{item.org}</p>
+                <p className="text-xs text-muted-foreground font-mono mt-1 mb-3">{item.period}</p>
+                <p className="text-sm text-muted-foreground leading-relaxed">{item.summary}</p>
+              </div>
+            </ScrollReveal>
+          ))}
         </div>
       </div>
     </section>
