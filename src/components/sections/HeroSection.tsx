@@ -36,7 +36,7 @@ const HeroSection = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="font-display italic text-primary text-sm md:text-base mb-4 tracking-[0.25em] uppercase"
         >
-          Software Engineering · Simulation · Security
+          Building simulation tools &amp; security software
         </motion.p>
 
         <motion.h1
@@ -115,7 +115,7 @@ const HeroSection = () => {
         transition={{ delay: 1.2 }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-float"
       >
-        <a href="#about">
+        <a href="#about" aria-label="Scroll to about">
           <ArrowDown className="text-primary/50" size={20} />
         </a>
       </motion.div>
