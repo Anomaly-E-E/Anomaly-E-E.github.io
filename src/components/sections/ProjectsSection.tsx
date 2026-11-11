@@ -1,4 +1,5 @@
 import ScrollReveal from "@/components/common/ScrollReveal";
+import TiltCard from "@/components/common/TiltCard";
 import { Shield, Globe, Gamepad2, BarChart3, Wrench, ExternalLink, Bot, Network } from "lucide-react";
 
 const projects = [
@@ -99,7 +100,8 @@ const ProjectsSection = () => {
 
         <div className="space-y-8">
           {projects.map((project, i) => (
-            <div key={i} className="group relative p-8 rounded-2xl bg-card border border-border hover:border-glow transition-all duration-500 box-glow">
+            <ScrollReveal key={project.title} delay={i * 0.05}>
+              <TiltCard className="group relative p-8 rounded-2xl bg-card border border-border hover:border-glow transition-colors duration-500 box-glow">
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                 
                 <div className="relative z-10">
@@ -145,7 +147,8 @@ const ProjectsSection = () => {
                     ))}
                   </div>
                 </div>
-            </div>
+              </TiltCard>
+            </ScrollReveal>
           ))}
         </div>
 
