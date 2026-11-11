@@ -3,14 +3,25 @@ import { Briefcase } from "lucide-react";
 
 const experiences = [
   {
-    role: "Software Development Intern",
+    role: "Simulation & Integration Software Developer (Work-Study)",
+    company: "Western University Lab",
+    location: "London, ON",
+    period: "Sep 2026 – Present",
+    bullets: [
+      "Developing Python tooling on the simulator's SDK and API to automate scenario setup, control simulation parameters, and log vehicle and driver data for research analysis.",
+      "Building Unity scenarios (construction zones, lane closures, changing traffic) to evaluate driver and autonomous vehicle behavior in the lab's digital twin environment.",
+      "Integrating the driving simulator with VR headsets (Meta Quest, OpenXR/SteamVR), calibrating head tracking and viewpoint alignment for driver-in-the-loop testing.",
+    ],
+  },
+  {
+    role: "Software Developer Intern",
     company: "Fortune Technologies",
     location: "Sharjah, UAE",
     period: "May 2025 – Aug 2025",
     bullets: [
-      "Architected a secure inventory management system using Java & Spring Boot, replacing manual tracking and reducing overhead by 40%.",
-      "Built automated contract monitoring with Spring Scheduler, reducing missed renewals by 30%.",
-      "Designed MySQL schema and optimized queries through indexing for faster data retrieval.",
+      "Built an inventory management web application with REST APIs in Java/Spring Boot and MySQL, replacing Excel-based tracking and reducing operational overhead by 40%.",
+      "Designed the database schema and optimized SQL queries with indexing to speed up data retrieval.",
+      "Automated contract deadline monitoring with Spring Scheduler daily expiry checks, cutting missed renewals by 30%, and wrote unit tests to ensure reliable delivery.",
     ],
   },
   {
@@ -76,7 +87,9 @@ const ExperienceSection = () => {
                         </h4>
                         <p className="text-sm text-primary/80 font-mono">{exp.company}</p>
                       </div>
-                      <p className="text-xs text-muted-foreground font-mono mt-1 sm:mt-0">{exp.period}</p>
+                      <p className="text-xs text-muted-foreground font-mono mt-1 sm:mt-0">
+                        {exp.period} · {exp.location}
+                      </p>
                     </div>
                     <ul className="space-y-2">
                       {exp.bullets.map((b, j) => (
