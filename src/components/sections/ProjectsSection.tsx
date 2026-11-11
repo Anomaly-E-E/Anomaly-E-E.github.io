@@ -1,7 +1,34 @@
 import ScrollReveal from "@/components/common/ScrollReveal";
-import { Shield, Globe, Gamepad2, BarChart3, Wrench, ExternalLink } from "lucide-react";
+import { Shield, Globe, Gamepad2, BarChart3, Wrench, ExternalLink, Bot, Network } from "lucide-react";
 
 const projects = [
+  {
+    title: "Wingman",
+    subtitle: "AI Screen Assistant for macOS",
+    description:
+      "An AI companion that follows your cursor around the screen. Ask by voice, hands-free, and it explains what you're looking at out loud and with diagrams. Extended from an open-source project.",
+    tech: ["Swift", "Node.js", "llama.cpp", "Claude API"],
+    highlights: [
+      "Agent mode that does the task for you: reads app controls through the macOS Accessibility API, then clicks and types as the LLM decides",
+      "Camera mode: point a phone or webcam at something and ask about it",
+      "Node.js bridge that routes each request to Claude or a local llama.cpp model",
+    ],
+    icon: Bot,
+    link: "",
+  },
+  {
+    title: "Sentinel",
+    subtitle: "ML-Based Intrusion Detection System · Western Cyber Society",
+    description:
+      "An intrusion detection system trained on real network traffic from the CICIDS dataset. I own the data pipeline, ingesting, cleaning and preparing large datasets for model training.",
+    tech: [],
+    highlights: [
+      "Own the data pipeline from raw traffic captures to training-ready data",
+      "Presenting with the team at the Canadian Tech Summit (Jan 2027)",
+    ],
+    icon: Network,
+    link: "",
+  },
   {
     title: "FalcoAI",
     subtitle: "Code Security Vulnerabilities Scanner",
@@ -116,7 +143,7 @@ const ProjectsSection = () => {
 
                   <p className="text-muted-foreground mb-6 leading-relaxed">{project.description}</p>
 
-                  <ul className="space-y-2 mb-6">
+                  <ul className={`space-y-2 ${project.tech.length ? "mb-6" : ""}`}>
                     {project.highlights.map((h, j) => (
                       <li key={j} className="text-sm text-muted-foreground flex gap-2">
                         <span className="text-primary/50 mt-0.5 shrink-0">▹</span>
