@@ -1,5 +1,6 @@
 import StarField from "@/components/layout/StarField";
 import Navbar from "@/components/layout/Navbar";
+import ScrollProgress from "@/components/layout/ScrollProgress";
 import HeroSection from "@/components/sections/HeroSection";
 import AboutSection from "@/components/sections/AboutSection";
 import ExperienceSection from "@/components/sections/ExperienceSection";
@@ -11,6 +12,7 @@ const Index = () => {
   return (
     <div className="relative min-h-screen bg-background grid-bg">
       <StarField />
+      <ScrollProgress />
       <Navbar />
       <main className="relative z-10">
         <HeroSection />
