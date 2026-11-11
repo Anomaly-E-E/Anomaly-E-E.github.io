@@ -31,10 +31,10 @@ const projects = [
   },
   {
     title: "FalcoAI",
-    subtitle: "Code Security Vulnerabilities Scanner",
+    subtitle: "AI-Powered Code Security Scanner",
     description:
-      "Full-stack AI powered static code analysis platform that detects security vulnerabilities across Python, JavaScript, Java, and more with severity classification and line level context.",
-    tech: ["React", "Node.js", "Express", "Supabase", "Gemini API"],
+      "Full-stack AI powered static analysis web app that detects security vulnerabilities across 4+ languages, with severity classification and line level context.",
+    tech: ["React", "Node.js", "Express", "PostgreSQL", "Gemini API"],
     highlights: [
       "Secure auth with JWT, bcrypt and email verification",
       "Modular REST API backed by PostgreSQL",
@@ -45,9 +45,9 @@ const projects = [
   },
   {
     title: "Basirah",
-    subtitle: "2nd Place at MSA Hacks 🥈",
+    subtitle: "Global Humanitarian Crisis Platform · 2nd Place, MSA Hacks 2026 🥈",
     description:
-      "An interactive global crisis platform designed to turn awareness into action. Features a live 3D globe of active humanitarian crises with real time updates, severity classification, and verified charity links so users can donate directly and see their impact visualized through a live animation from donor to destination.",
+      "A real time 3D globe that maps active humanitarian crises from live API data, showing donors funding gaps and aid status at a glance. Verified charity links let users donate directly and watch their impact animate from donor to destination.",
     tech: ["React", "TypeScript", "Node.js", "Mapbox GL JS"],
     highlights: [
       "Interactive 3D globe with crises mapped to exact locations",
