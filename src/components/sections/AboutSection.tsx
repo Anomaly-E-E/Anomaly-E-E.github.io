@@ -6,10 +6,7 @@ const AboutSection = () => {
     <section id="about" className="relative scroll-mt-20 py-32 px-6">
       <div className="max-w-4xl mx-auto">
         <ScrollReveal>
-          <h2 className="font-mono text-primary text-sm tracking-widest uppercase mb-2">About</h2>
-          <h3 className="text-3xl md:text-4xl font-bold mb-8">
-            Who I <span className="text-primary">Am</span>
-          </h3>
+          <h2 className="text-3xl md:text-4xl font-bold mb-8">About</h2>
         </ScrollReveal>
 
         <div className="grid md:grid-cols-2 gap-12">

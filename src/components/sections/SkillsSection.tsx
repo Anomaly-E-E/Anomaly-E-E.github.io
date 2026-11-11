@@ -41,10 +41,7 @@ const SkillsSection = () => {
     <section id="skills" className="relative scroll-mt-20 py-32 px-6">
       <div className="max-w-4xl mx-auto">
         <ScrollReveal>
-          <h2 className="font-mono text-primary text-sm tracking-widest uppercase mb-2">Skills</h2>
-          <h3 className="text-3xl md:text-4xl font-bold mb-12">
-            What I <span className="text-primary">Work With</span>
-          </h3>
+          <h2 className="text-3xl md:text-4xl font-bold mb-12">Skills</h2>
         </ScrollReveal>
 
         <div className="grid sm:grid-cols-2 gap-8">
@@ -74,7 +71,7 @@ const SkillsSection = () => {
         {/* Certifications */}
         <ScrollReveal delay={0.2}>
           <h3 className="text-2xl md:text-3xl font-bold mt-20 mb-8">
-            <span className="text-primary">Certifications</span>
+            Certifications
           </h3>
         </ScrollReveal>
 

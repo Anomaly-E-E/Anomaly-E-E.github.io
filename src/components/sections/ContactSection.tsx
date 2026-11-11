@@ -6,10 +6,7 @@ const ContactSection = () => {
     <section id="contact" className="relative scroll-mt-20 py-32 px-6">
       <div className="max-w-2xl mx-auto text-center">
         <ScrollReveal>
-          <h2 className="font-mono text-primary text-sm tracking-widest uppercase mb-2">Contact</h2>
-          <h3 className="text-3xl md:text-4xl font-bold mb-6">
-            Let's <span className="text-primary">Connect</span>
-          </h3>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Contact</h2>
           <p className="text-muted-foreground mb-10 leading-relaxed">
             I'm looking for software and security internships. Email is the fastest way to
             reach me, and I'm happy to chat about any of the projects above.

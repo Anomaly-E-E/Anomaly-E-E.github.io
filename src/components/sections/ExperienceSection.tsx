@@ -55,10 +55,7 @@ const ExperienceSection = () => {
     <section id="experience" className="relative scroll-mt-20 py-32 px-6">
       <div className="max-w-4xl mx-auto">
         <ScrollReveal>
-          <h2 className="font-mono text-primary text-sm tracking-widest uppercase mb-2">Experience</h2>
-          <h3 className="text-3xl md:text-4xl font-bold mb-12">
-            Where I've <span className="text-primary">Worked</span>
-          </h3>
+          <h2 className="text-3xl md:text-4xl font-bold mb-12">Experience</h2>
         </ScrollReveal>
 
         <div ref={timelineRef} className="relative">
@@ -105,7 +102,7 @@ const ExperienceSection = () => {
 
         <ScrollReveal>
           <h4 className="text-xl md:text-2xl font-bold mt-20 mb-6">
-            Leadership & <span className="text-primary">Teams</span>
+            Leadership &amp; Teams
           </h4>
         </ScrollReveal>
 

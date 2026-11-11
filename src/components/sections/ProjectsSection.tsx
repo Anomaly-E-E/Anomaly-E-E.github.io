@@ -92,10 +92,7 @@ const ProjectsSection = () => {
     <section id="projects" className="relative scroll-mt-20 py-32 px-6">
       <div className="max-w-4xl mx-auto">
         <ScrollReveal>
-          <h2 className="font-mono text-primary text-sm tracking-widest uppercase mb-2">Projects</h2>
-          <h3 className="text-3xl md:text-4xl font-bold mb-12">
-            Things I've <span className="text-primary">Built</span>
-          </h3>
+          <h2 className="text-3xl md:text-4xl font-bold mb-12">Projects</h2>
         </ScrollReveal>
 
         <div className="space-y-8">
@@ -154,7 +151,7 @@ const ProjectsSection = () => {
 
         <ScrollReveal>
           <h4 className="text-xl md:text-2xl font-bold mt-20 mb-6">
-            More <span className="text-primary">Projects</span>
+            More Projects
           </h4>
         </ScrollReveal>
 
