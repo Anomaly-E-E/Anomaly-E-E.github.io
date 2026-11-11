@@ -21,15 +21,9 @@ const StarField = () => {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    const resize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      initStars();
-    };
-    resize();
-    window.addEventListener("resize", resize);
+    const still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-    let raf: number;
+    let raf = 0;
     const render = (time: number) => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -41,9 +35,20 @@ const StarField = () => {
         ctx.fill();
       }
 
-      raf = requestAnimationFrame(render);
+      if (!still) raf = requestAnimationFrame(render);
     };
-    raf = requestAnimationFrame(render);
+
+    // with reduced motion there's no loop, so redraw once after each resize
+    const resize = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      initStars();
+      if (still) render(0);
+    };
+    resize();
+    window.addEventListener("resize", resize);
+
+    if (!still) raf = requestAnimationFrame(render);
 
     return () => {
       cancelAnimationFrame(raf);
