@@ -131,7 +131,7 @@ const ProjectsSection = () => {
                   <ul className={`space-y-2 ${project.tech.length ? "mb-6" : ""}`}>
                     {project.highlights.map((h, j) => (
                       <li key={j} className="text-sm text-muted-foreground flex gap-2">
-                        <span className="text-primary/50 mt-0.5 shrink-0">▹</span>
+                        <span className="text-primary/50 mt-0.5 shrink-0">–</span>
                         {h}
                       </li>
                     ))}

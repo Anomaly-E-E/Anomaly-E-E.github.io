@@ -22,7 +22,7 @@ const experiences = [
     bullets: [
       "Built an inventory management web application with REST APIs in Java/Spring Boot and MySQL, replacing Excel-based tracking and reducing operational overhead by 40%.",
       "Designed the database schema and optimized SQL queries with indexing to speed up data retrieval.",
-      "Automated contract deadline monitoring with Spring Scheduler daily expiry checks, cutting missed renewals by 30%, and wrote unit tests to ensure reliable delivery.",
+      "Automated contract deadline monitoring with Spring Scheduler daily expiry checks, cutting missed renewals by 30%, and wrote unit tests for it.",
     ],
   },
 ];
@@ -84,14 +84,14 @@ const ExperienceSection = () => {
                         </h4>
                         <p className="text-sm text-primary/80 font-mono">{exp.company}</p>
                       </div>
-                      <p className="text-xs text-muted-foreground font-mono mt-1 sm:mt-0">
+                      <p className="text-xs text-muted-foreground font-mono mt-1 sm:mt-0 sm:shrink-0 sm:ml-4">
                         {exp.period} · {exp.location}
                       </p>
                     </div>
                     <ul className="space-y-2">
                       {exp.bullets.map((b, j) => (
                         <li key={j} className="text-sm text-muted-foreground flex gap-2">
-                          <span className="text-primary/50 mt-1 shrink-0">▹</span>
+                          <span className="text-primary/50 mt-1 shrink-0">–</span>
                           {b}
                         </li>
                       ))}
