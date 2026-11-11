@@ -5,15 +5,23 @@ import { Award } from "lucide-react";
 const skillGroups = [
   {
     label: "Languages",
-    skills: ["Java", "JavaScript", "Python", "C++", "C#", "SQL", "HTML/CSS"],
+    skills: ["Python", "JavaScript", "TypeScript", "Java", "SQL", "HTML/CSS", "Swift", "C#"],
   },
   {
     label: "Frameworks & Libraries",
-    skills: ["React", "Node.js", "Express", "Spring Boot", "ROS2"],
+    skills: ["React", "Node.js", "Express", "Spring Boot"],
   },
   {
-    label: "Tools & Data",
-    skills: ["Docker", "Git", "Linux", "AWS", "PostgreSQL", "MySQL", "MongoDB", "Redis", "Power BI", "Tableau"],
+    label: "Databases",
+    skills: ["PostgreSQL", "MySQL"],
+  },
+  {
+    label: "Tools & Cloud",
+    skills: ["Linux/Bash", "Git", "GitHub", "Docker", "CI/CD", "AWS", "REST APIs", "Power BI", "Tableau"],
+  },
+  {
+    label: "Simulation & XR",
+    skills: ["Unity", "OpenXR / SteamVR", "Meta Quest"],
   },
   {
     label: "Security",
