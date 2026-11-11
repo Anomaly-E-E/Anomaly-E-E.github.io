@@ -88,7 +88,7 @@ const moreProjects = [
 
 const ProjectsSection = () => {
   return (
-    <section id="projects" className="relative py-32 px-6">
+    <section id="projects" className="relative scroll-mt-20 py-32 px-6">
       <div className="max-w-4xl mx-auto">
         <ScrollReveal>
           <h2 className="font-mono text-primary text-sm tracking-widest uppercase mb-2">Projects</h2>

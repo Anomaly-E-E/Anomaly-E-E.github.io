@@ -45,7 +45,7 @@ const leadership = [
 
 const ExperienceSection = () => {
   return (
-    <section id="experience" className="relative py-32 px-6">
+    <section id="experience" className="relative scroll-mt-20 py-32 px-6">
       <div className="max-w-4xl mx-auto">
         <ScrollReveal>
           <h2 className="font-mono text-primary text-sm tracking-widest uppercase mb-2">Experience</h2>

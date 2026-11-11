@@ -3,7 +3,7 @@ import { GraduationCap, MapPin } from "lucide-react";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="relative py-32 px-6">
+    <section id="about" className="relative scroll-mt-20 py-32 px-6">
       <div className="max-w-4xl mx-auto">
         <ScrollReveal>
           <h2 className="font-mono text-primary text-sm tracking-widest uppercase mb-2">About</h2>

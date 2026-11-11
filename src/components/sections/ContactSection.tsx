@@ -3,7 +3,7 @@ import { Mail, Linkedin, Github } from "lucide-react";
 
 const ContactSection = () => {
   return (
-    <section id="contact" className="relative py-32 px-6">
+    <section id="contact" className="relative scroll-mt-20 py-32 px-6">
       <div className="max-w-2xl mx-auto text-center">
         <ScrollReveal>
           <h2 className="font-mono text-primary text-sm tracking-widest uppercase mb-2">Contact</h2>
