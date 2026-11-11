@@ -15,15 +15,17 @@ const AboutSection = () => {
         <div className="grid md:grid-cols-2 gap-12">
           <ScrollReveal delay={0.1}>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              I'm a second year Software Engineering student at Western. I got into programming
+              I'm a third year Software Engineering student at Western. I got into programming
               by breaking things and figuring out how to fix them, and that habit is a big part of
               why I ended up caring about security. I like building software people actually use,
               and I like thinking about how someone would try to break it.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Right now I'm writing robotics software with WE Mars, running the tech side of the
-              Western Engineering Competition, and building projects like FalcoAI, a tool that scans
-              code for security issues. I'm also working toward my CompTIA Security+ and looking for
+              Right now I'm building simulation tooling at a Western University research lab, writing
+              Python and Unity scenarios for a driving simulator and hooking it up to VR headsets.
+              Outside the lab I'm working on Wingman, an AI assistant for macOS that can see your
+              screen and act on it, and the data pipeline for Sentinel, an intrusion detection system
+              with Western Cyber Society. I'm also working toward my CompTIA Security+ and looking for
               internships where I can build and secure real systems.
             </p>
           </ScrollReveal>
