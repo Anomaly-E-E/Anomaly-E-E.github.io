@@ -19,12 +19,12 @@ const projects = [
   },
   {
     title: "Sentinel",
-    subtitle: "ML-Based Intrusion Detection System · Western Cyber Society",
+    subtitle: "ML Intrusion Detection · Western Cyber Society · Oct 2026 – Present",
     description:
-      "An intrusion detection system trained on real network traffic from the CICIDS dataset. I own the data pipeline, ingesting, cleaning and preparing large datasets for model training.",
+      "An intrusion detection system trained on real network traffic from the CICIDS dataset. I own the data pipeline.",
     tech: [],
     highlights: [
-      "Own the data pipeline from raw traffic captures to training-ready data",
+      "Ingesting, cleaning and preparing large traffic datasets for model training",
       "Presenting with the team at the Canadian Tech Summit (Jan 2027)",
     ],
     icon: Network,
@@ -34,7 +34,7 @@ const projects = [
     title: "FalcoAI",
     subtitle: "AI-Powered Code Security Scanner",
     description:
-      "Full-stack AI powered static analysis web app that detects security vulnerabilities across 4+ languages, with severity classification and line level context.",
+      "A full-stack web app that uses Gemini to scan code for security vulnerabilities across 4+ languages, with severity ratings and line level context.",
     tech: ["React", "Node.js", "Express", "PostgreSQL", "Gemini API"],
     highlights: [
       "Secure auth with JWT, bcrypt and email verification",
@@ -46,13 +46,13 @@ const projects = [
   },
   {
     title: "Basirah",
-    subtitle: "Global Humanitarian Crisis Platform · 2nd Place, MSA Hacks 2026 🥈",
+    subtitle: "Humanitarian Crisis Globe · 2nd Place, MSA Hacks 2026",
     description:
-      "A real time 3D globe that maps active humanitarian crises from live API data, showing donors funding gaps and aid status at a glance. Verified charity links let users donate directly and watch their impact animate from donor to destination.",
+      "A real time 3D globe that maps active humanitarian crises from live API data, with funding gaps and aid status for each one. Verified charity links let users donate directly and watch their impact animate from donor to destination.",
     tech: ["React", "TypeScript", "Node.js", "Mapbox GL JS"],
     highlights: [
       "Interactive 3D globe with crises mapped to exact locations",
-      "Live donation impact visualization with smooth animations",
+      "Live animation showing each donation travel from donor to destination",
       "Crisis severity classification with funding gaps and aid status",
     ],
     icon: Globe,
@@ -105,7 +105,7 @@ const ProjectsSection = () => {
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                 
                 <div className="relative z-10">
-                  <div className="flex items-start justify-between mb-4">
+                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-4">
                     <div className="flex items-center gap-3">
                       <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                         <project.icon className="text-primary" size={20} />
@@ -120,7 +120,7 @@ const ProjectsSection = () => {
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="shrink-0 inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-all text-sm"
+                        className="self-start shrink-0 inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-all text-sm"
                       >
                         Live demo
                         <ExternalLink size={14} />
@@ -139,13 +139,15 @@ const ProjectsSection = () => {
                     ))}
                   </ul>
 
-                  <div className="flex flex-wrap gap-2">
-                    {project.tech.map((t) => (
-                      <span key={t} className="text-xs font-mono px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20">
-                        {t}
-                      </span>
-                    ))}
-                  </div>
+                  {project.tech.length > 0 && (
+                    <div className="flex flex-wrap gap-2">
+                      {project.tech.map((t) => (
+                        <span key={t} className="text-xs font-mono px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20">
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+                  )}
                 </div>
               </TiltCard>
             </ScrollReveal>
