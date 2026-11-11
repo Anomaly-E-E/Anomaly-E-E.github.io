@@ -116,7 +116,7 @@ const Navbar = () => {
                   key={link.href}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="text-sm text-foreground/60 hover:text-primary"
+                  className={`text-sm ${active === link.href ? "text-primary" : "text-foreground/60 hover:text-primary"}`}
                 >
                   {link.label}
                 </a>

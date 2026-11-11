@@ -53,6 +53,7 @@ const StarField = () => {
 
   return (
     <canvas
+      aria-hidden="true"
       ref={canvasRef}
       className="fixed inset-0 pointer-events-none z-0"
       style={{ width: "100%", height: "100%" }}
