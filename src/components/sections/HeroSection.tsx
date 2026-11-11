@@ -1,22 +1,34 @@
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowDown, GraduationCap, MapPin, Shield, Terminal, Cpu } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
+  const ref = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
+  const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
+  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "-25%"]);
+  const textOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
+
   return (
-    <section className="relative min-h-screen flex items-start justify-center px-6 overflow-hidden pt-[140px]">
+    <section ref={ref} className="relative min-h-screen flex items-start justify-center px-6 overflow-hidden pt-[140px]">
       {/* Background image */}
       <div className="absolute inset-0">
-        <img
+        {/* scaled up so the edge doesn't show while it moves */}
+        <motion.img
           src={heroBg}
           alt=""
+          style={{ y: bgY, scale: 1.1 }}
           className="w-full h-full object-cover"
         />
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-gradient-to-t from-background/55 via-background/30 to-background/15" />
       </div>
 
-      <div className="relative z-10 max-w-4xl mx-auto text-center">
+      <motion.div
+        style={{ y: textY, opacity: textOpacity }}
+        className="relative z-10 max-w-4xl mx-auto text-center"
+      >
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -93,7 +105,7 @@ const HeroSection = () => {
             Get in Touch
           </a>
         </motion.div>
-      </div>
+      </motion.div>
 
       {/* Scroll indicator */}
       <motion.div
