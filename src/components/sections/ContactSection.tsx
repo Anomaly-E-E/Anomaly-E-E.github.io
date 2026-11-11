@@ -11,8 +11,8 @@ const ContactSection = () => {
             Let's <span className="text-primary">Connect</span>
           </h3>
           <p className="text-muted-foreground mb-10 leading-relaxed">
-            I'm always open to new opportunities, projects, or just a good conversation.
-            Feel free to reach out and I'll get back to you.
+            I'm looking for software and security internships. Email is the fastest way to
+            reach me, and I'm happy to chat about any of the projects above.
           </p>
         </ScrollReveal>
 
