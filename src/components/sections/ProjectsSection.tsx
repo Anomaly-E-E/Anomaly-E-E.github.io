@@ -57,47 +57,32 @@ const projects = [
     icon: Globe,
     link: "https://basirah-wine.vercel.app/",
   },
+];
+
+const moreProjects = [
   {
     title: "No One Needs To Lie",
     subtitle: "Murder Mystery Game",
     description:
-      "A real time murder mystery game featuring an enemy FOV system built in C# using raycasting and vector angle calculations to detect player entry into a V shaped vision cone, triggering timed chase sequences with accelerating enemy speed via Physics2D collision layers.",
-    tech: ["C#", "Unity", "Gemini Nano", "Git"],
-    highlights: [
-      "Leveraged Gemini Nano to generate and refine sprite characters and tilemap assets with multi state animations via Unity Animator",
-      "Architected scalable game systems using OOP principles, encapsulation, and inheritance",
-      "Collaborated using Git for version control, feature integration, and iterative delivery across distributed subsystems",
-    ],
+      "A real time murder mystery game in Unity. Built an enemy vision cone with raycasting and vector math that triggers chase sequences with accelerating enemy speed.",
+    tech: ["C#", "Unity", "Gemini Nano"],
     icon: Gamepad2,
-    link: "",
   },
   {
     title: "Data Dashboards",
     subtitle: "Power BI and Tableau",
     description:
-      "Two dashboards built on large public datasets. One looks at 2M+ U.S. commercial flights to show on time, delayed and canceled rates by airline and airport. The other breaks down 23M+ rows of Seattle Airbnb data to find what actually drives price across the city.",
-    tech: ["Power BI", "DAX", "Tableau", "Excel", "Python"],
-    highlights: [
-      "Built a star schema model in Power BI with DAX measures for on time, delayed and canceled percentages",
-      "Mapped Airbnb pricing across 27 Seattle zip codes with weekly revenue trends and price per bedroom",
-      "Explored 100+ fields to pick out the main revenue drivers and pricing patterns",
-    ],
+      "Dashboards on 2M+ U.S. commercial flights and 23M+ rows of Seattle Airbnb data, showing delay rates by airline and what actually drives rental prices.",
+    tech: ["Power BI", "DAX", "Tableau", "Python"],
     icon: BarChart3,
-    link: "",
   },
   {
     title: "Peat Cup Permutator",
     subtitle: "2nd Place in ES1050, picked by the client",
     description:
-      "A semi automatic hole punching machine our team of five built for Western Agrotunnel. It cut their manual prep time by 80% and the client chose it to actually put into use.",
+      "A semi automatic hole punching machine our team of five built for Western Agrotunnel. It cut their manual prep time by 80% and the client put it into use.",
     tech: ["Arduino", "AutoCAD", "Autodesk Inventor"],
-    highlights: [
-      "Led the CAD modeling and programmed the Arduino actuators",
-      "Designed a modular base with jigsaw style pieces so it can be expanded later",
-      "Put together the full documentation package so the client can extend it without us",
-    ],
     icon: Wrench,
-    link: "",
   },
 ];
 
@@ -161,6 +146,36 @@ const ProjectsSection = () => {
                   </div>
                 </div>
             </div>
+          ))}
+        </div>
+
+        <ScrollReveal>
+          <h4 className="text-xl md:text-2xl font-bold mt-20 mb-6">
+            More <span className="text-primary">Projects</span>
+          </h4>
+        </ScrollReveal>
+
+        <div className="grid sm:grid-cols-2 gap-6">
+          {moreProjects.map((project, i) => (
+            <ScrollReveal key={project.title} delay={i * 0.1}>
+              <div className="h-full flex flex-col p-6 rounded-xl bg-card border border-border hover:border-glow transition-all duration-300">
+                <div className="flex items-center gap-3 mb-3">
+                  <project.icon className="text-primary shrink-0" size={18} />
+                  <div>
+                    <p className="font-semibold text-foreground">{project.title}</p>
+                    <p className="text-xs text-primary/70 font-mono">{project.subtitle}</p>
+                  </div>
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4 flex-1">{project.description}</p>
+                <div className="flex flex-wrap gap-2">
+                  {project.tech.map((t) => (
+                    <span key={t} className="text-xs font-mono px-2.5 py-0.5 rounded-full bg-secondary text-secondary-foreground border border-border">
+                      {t}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>
