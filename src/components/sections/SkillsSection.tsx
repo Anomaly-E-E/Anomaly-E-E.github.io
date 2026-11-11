@@ -5,7 +5,7 @@ import { Award } from "lucide-react";
 const skillGroups = [
   {
     label: "Languages",
-    skills: ["Python", "JavaScript", "TypeScript", "Java", "SQL", "HTML/CSS", "Swift", "C#"],
+    skills: ["Python", "JavaScript", "TypeScript", "Java", "SQL", "HTML/CSS", "C#"],
   },
   {
     label: "Frameworks & Libraries",
