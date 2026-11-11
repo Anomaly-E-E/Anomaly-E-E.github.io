@@ -83,9 +83,9 @@ const SkillsSection = () => {
             const done = cert.status === "Completed";
             return (
               <ScrollReveal key={cert.name} delay={i * 0.1}>
-                <div className="flex items-center gap-4 p-5 rounded-xl bg-card border border-primary/30 hover:border-primary/60 transition-all duration-300 box-glow">
-                  <div className="w-12 h-12 shrink-0 rounded-lg bg-primary/15 flex items-center justify-center">
-                    <Award className="text-primary" size={24} />
+                <div className="flex items-center gap-4 p-5 rounded-xl bg-card border border-border hover:border-glow transition-all duration-300">
+                  <div className="w-10 h-10 shrink-0 rounded-lg bg-primary/15 flex items-center justify-center">
+                    <Award className="text-primary" size={20} />
                   </div>
                   <div>
                     <p className="text-base md:text-lg font-semibold text-foreground">{cert.name}</p>

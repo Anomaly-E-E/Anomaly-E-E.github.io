@@ -101,9 +101,7 @@ const ProjectsSection = () => {
         <div className="space-y-8">
           {projects.map((project, i) => (
             <ScrollReveal key={project.title} delay={i * 0.05}>
-              <TiltCard className="group relative p-8 rounded-2xl bg-card border border-border hover:border-glow transition-colors duration-500 box-glow">
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-                
+              <TiltCard className="group relative p-8 rounded-2xl bg-card border border-border hover:border-glow transition-colors duration-500">
                 <div className="relative z-10">
                   <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-4">
                     <div className="flex items-center gap-3">

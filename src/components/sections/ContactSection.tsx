@@ -49,7 +49,7 @@ const ContactSection = () => {
         <ScrollReveal delay={0.3}>
           <a
             href="mailto:arshanshareef@gmail.com"
-            className="inline-block mt-8 px-8 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-all box-glow text-sm"
+            className="inline-block mt-8 px-8 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-all text-sm"
           >
             Say Hello
           </a>
