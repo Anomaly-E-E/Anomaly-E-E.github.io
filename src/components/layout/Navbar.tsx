@@ -13,11 +13,30 @@ const links = [
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [active, setActive] = useState("");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    const sections = links
+      .map((l) => document.querySelector(l.href))
+      .filter(Boolean) as Element[];
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setActive(`#${entry.target.id}`);
+        });
+      },
+      { rootMargin: "-40% 0px -55% 0px" }
+    );
+
+    sections.forEach((s) => observer.observe(s));
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -40,7 +59,9 @@ const Navbar = () => {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-foreground/60 hover:text-primary transition-colors duration-300"
+              className={`text-sm transition-colors duration-300 ${
+                active === link.href ? "text-primary" : "text-foreground/60 hover:text-primary"
+              }`}
             >
               {link.label}
             </a>
