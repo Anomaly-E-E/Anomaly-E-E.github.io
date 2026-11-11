@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
-import { ArrowDown, GraduationCap, MapPin, Shield, Terminal, Cpu } from "lucide-react";
+import { ArrowDown, GraduationCap, MapPin } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
@@ -34,7 +34,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="font-display italic text-primary text-sm md:text-base mb-4 tracking-[0.25em] uppercase"
+          className="font-mono text-primary text-sm md:text-base mb-4"
         >
           Building simulation tools &amp; security software
         </motion.p>
@@ -53,7 +53,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
-          className="flex items-center justify-center gap-3 text-sm text-foreground/70 mb-6"
+          className="flex items-center justify-center gap-3 text-sm text-foreground/70 mb-10"
         >
           <span className="inline-flex items-center gap-1.5">
             <GraduationCap size={15} className="text-primary/80" />
@@ -63,27 +63,6 @@ const HeroSection = () => {
           <span className="inline-flex items-center gap-1.5">
             <MapPin size={15} className="text-primary/80" />
             Toronto, Canada
-          </span>
-        </motion.div>
-
-        {/* Interest tags */}
-        <motion.div
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.75 }}
-          className="flex flex-wrap items-center justify-center gap-3 mb-10"
-        >
-          <span className="inline-flex items-center gap-2 text-xs px-4 py-2 rounded-full border border-foreground/15 bg-foreground/5 backdrop-blur-sm text-foreground/80">
-            <Terminal size={13} className="text-primary" />
-            Software Development
-          </span>
-          <span className="inline-flex items-center gap-2 text-xs px-4 py-2 rounded-full border border-foreground/15 bg-foreground/5 backdrop-blur-sm text-foreground/80">
-            <Shield size={13} className="text-primary" />
-            Cybersecurity
-          </span>
-          <span className="inline-flex items-center gap-2 text-xs px-4 py-2 rounded-full border border-foreground/15 bg-foreground/5 backdrop-blur-sm text-foreground/80">
-            <Cpu size={13} className="text-primary" />
-            Simulation &amp; AI Tooling
           </span>
         </motion.div>
 

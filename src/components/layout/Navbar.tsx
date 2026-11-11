@@ -49,8 +49,8 @@ const Navbar = () => {
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#" className="font-display italic text-primary font-semibold tracking-wider text-lg">
-          A.S.
+        <a href="#" className="font-semibold text-foreground text-lg">
+          Arshan Shareef<span className="text-primary">.</span>
         </a>
         
         {/* Desktop */}
