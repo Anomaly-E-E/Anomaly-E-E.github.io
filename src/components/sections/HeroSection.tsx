@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
 import { ArrowDown, GraduationCap, MapPin, Shield, Terminal, Cpu } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
@@ -9,6 +9,7 @@ const HeroSection = () => {
   const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
   const textY = useTransform(scrollYProgress, [0, 1], ["0%", "-25%"]);
   const textOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
+  const reduce = useReducedMotion();
 
   return (
     <section ref={ref} className="relative min-h-screen flex items-start justify-center px-6 overflow-hidden pt-[140px]">
@@ -18,7 +19,7 @@ const HeroSection = () => {
         <motion.img
           src={heroBg}
           alt=""
-          style={{ y: bgY, scale: 1.1 }}
+          style={{ y: reduce ? 0 : bgY, scale: 1.1 }}
           className="w-full h-full object-cover"
         />
         {/* Dark overlay for text readability */}
@@ -26,7 +27,7 @@ const HeroSection = () => {
       </div>
 
       <motion.div
-        style={{ y: textY, opacity: textOpacity }}
+        style={reduce ? undefined : { y: textY, opacity: textOpacity }}
         className="relative z-10 max-w-4xl mx-auto text-center"
       >
         <motion.p

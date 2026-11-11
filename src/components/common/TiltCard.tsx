@@ -1,5 +1,5 @@
 import { ReactNode, MouseEvent } from "react";
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import { motion, useMotionValue, useSpring, useTransform, useReducedMotion } from "framer-motion";
 
 interface TiltCardProps {
   children: ReactNode;
@@ -11,8 +11,10 @@ const TiltCard = ({ children, className = "" }: TiltCardProps) => {
   const y = useMotionValue(0);
   const rotateX = useSpring(useTransform(y, [-0.5, 0.5], [4, -4]), { stiffness: 200, damping: 20 });
   const rotateY = useSpring(useTransform(x, [-0.5, 0.5], [-4, 4]), { stiffness: 200, damping: 20 });
+  const reduce = useReducedMotion();
 
   const onMove = (e: MouseEvent<HTMLDivElement>) => {
+    if (reduce) return;
     const rect = e.currentTarget.getBoundingClientRect();
     x.set((e.clientX - rect.left) / rect.width - 0.5);
     y.set((e.clientY - rect.top) / rect.height - 0.5);
