@@ -1,5 +1,6 @@
+import { useRef } from "react";
+import { motion, useScroll } from "framer-motion";
 import ScrollReveal from "@/components/common/ScrollReveal";
-import { Briefcase } from "lucide-react";
 
 const experiences = [
   {
@@ -44,6 +45,12 @@ const leadership = [
 ];
 
 const ExperienceSection = () => {
+  const timelineRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: timelineRef,
+    offset: ["start 70%", "end 60%"],
+  });
+
   return (
     <section id="experience" className="relative scroll-mt-20 py-32 px-6">
       <div className="max-w-4xl mx-auto">
@@ -54,9 +61,13 @@ const ExperienceSection = () => {
           </h3>
         </ScrollReveal>
 
-        <div className="relative">
+        <div ref={timelineRef} className="relative">
           {/* Timeline line */}
           <div className="absolute left-[19px] top-0 bottom-0 w-px bg-border" />
+          <motion.div
+            style={{ scaleY: scrollYProgress }}
+            className="absolute left-[19px] top-0 bottom-0 w-px bg-primary origin-top"
+          />
 
           <div className="space-y-12">
             {experiences.map((exp, i) => (
