@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowDown, GraduationCap, MapPin, Shield, Terminal, Linkedin, Github } from "lucide-react";
+import { ArrowDown, GraduationCap, MapPin, Shield, Terminal, Cpu } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
@@ -23,7 +23,7 @@ const HeroSection = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="font-display italic text-primary text-sm md:text-base mb-4 tracking-[0.25em] uppercase"
         >
-          Software Engineer &amp; Cybersecurity
+          Software Engineering · Simulation · Security
         </motion.p>
 
         <motion.h1
@@ -67,6 +67,10 @@ const HeroSection = () => {
           <span className="inline-flex items-center gap-2 text-xs px-4 py-2 rounded-full border border-foreground/15 bg-foreground/5 backdrop-blur-sm text-foreground/80">
             <Shield size={13} className="text-primary" />
             Cybersecurity
+          </span>
+          <span className="inline-flex items-center gap-2 text-xs px-4 py-2 rounded-full border border-foreground/15 bg-foreground/5 backdrop-blur-sm text-foreground/80">
+            <Cpu size={13} className="text-primary" />
+            Simulation &amp; AI Tooling
           </span>
         </motion.div>
 
