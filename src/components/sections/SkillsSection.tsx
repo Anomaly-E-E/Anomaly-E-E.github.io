@@ -12,16 +12,16 @@ const skillGroups = [
     skills: ["React", "Node.js", "Express", "Spring Boot"],
   },
   {
-    label: "Databases",
-    skills: ["PostgreSQL", "MySQL"],
+    label: "Data",
+    skills: ["PostgreSQL", "MySQL", "Power BI", "Tableau"],
   },
   {
     label: "Tools & Cloud",
-    skills: ["Linux/Bash", "Git", "GitHub", "Docker", "CI/CD", "AWS", "REST APIs", "Power BI", "Tableau"],
+    skills: ["Linux/Bash", "Git", "GitHub", "Docker", "CI/CD", "AWS", "REST APIs"],
   },
   {
     label: "Simulation & XR",
-    skills: ["Unity", "OpenXR / SteamVR", "Meta Quest"],
+    skills: ["Unity", "OpenXR", "SteamVR"],
   },
   {
     label: "Security",
@@ -51,7 +51,7 @@ const SkillsSection = () => {
           {skillGroups.map((group, i) => (
             <ScrollReveal key={group.label} delay={i * 0.1}>
               <div className="p-6 rounded-xl bg-card border border-border hover:border-glow transition-all duration-300">
-                <h4 className="font-mono text-sm text-primary mb-4 tracking-wider">{`// ${group.label}`}</h4>
+                <h4 className="font-mono text-sm text-primary mb-4 tracking-wider">{group.label}</h4>
                 <div className="flex flex-wrap gap-2">
                   {group.skills.map((skill, j) => (
                     <motion.span
